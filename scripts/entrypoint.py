@@ -235,6 +235,8 @@ def main():
 
             if current_ip_in_ldap in oxtrust_ip_pool and is_cr_enabled:
                 write_master_ip(current_ip_in_ldap)
+            else:
+                signalon = True
 
             if check_master_ip(current_ip_in_ldap) and oxtrust_containers:
                 signalon = True
